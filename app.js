@@ -56,6 +56,7 @@ app.get('/del-cookie', (req,res) => {
 let token;
 
 app.post("/login", (req,res) => {
+    // Olhar explicação rota (/)
     token = v4();
     //console.log(req.headers.cookie);
     const {email} = req.body;
@@ -74,6 +75,7 @@ app.post("/login", (req,res) => {
 }); 
 
 app.post("/secondpage", (req,res) => {
+    // Olhar explicação rota (/)
     console.log(req.headers.cookie)
     const tokenValidate = req.cookies.token;
     if(tokenValidate === token) {
